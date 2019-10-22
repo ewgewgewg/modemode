@@ -18,8 +18,8 @@ mode(array);
 //=> 2
 
 const secondArray = [1,1,2,2,3];
-mode(array);
+mode(secondArray);
 //=> 2
 
-mode(array, true);
+mode(secondArray, true);
 //=> [1, 2]
