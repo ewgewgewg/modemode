@@ -5,7 +5,7 @@ Finds the mode of an array. Defaults to greatest number in event of ties. Option
 ## Install
 
 ```
-$ npm install modemode
+$ npm i modemode
 ```
 
 ## Usage
