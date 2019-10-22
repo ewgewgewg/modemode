@@ -1,0 +1,13 @@
+{
+    "name": "modemode",
+    "version": "1.0.0",
+    "description": "Finds mode of an array",
+    "license": "MIT",
+    "repository": "ewgewgewg/modemode",
+    "main": "index.js",
+    "keywords": [
+        "mode",
+        "centrality",
+        "statistics"
+    ]
+}
