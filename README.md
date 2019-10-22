@@ -17,8 +17,9 @@ const array = [1,2,2,3];
 mode(array);
 //=> 2
 
-tiny(1337);
-//=> Uncaught TypeError: Tiny wants a string!
-//    at tiny (<anonymous>:2:41)
-//    at <anonymous>:1:1
-```
+const secondArray = [1,1,2,2,3];
+mode(array);
+//=> 2
+
+mode(array, true);
+//=> [1, 2]
