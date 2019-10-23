@@ -16,17 +16,15 @@ module.exports = function mode (array, doYouWantAnArrayOfTies = false) {
         if(bank[key] > resultCount){
             result = +key;
             resultCount = bank[key];
-        } else if (doYouWantAnArrayOfTies === false &&
-            bank[key] === resultCount && key > result){
+        } else if ((doYouWantAnArrayOfTies === false) &&
+            (bank[key] === resultCount) &&
+            (key > result)){
                 result = +key;
-        } else if (doYouWantAnArrayOfTies === true &&
-            bank[key] === resultCount){
-                const ties = [result] || [...result];
-                ties.push(+key);
-                result = ties;
+        } else if ((doYouWantAnArrayOfTies === true) &&
+            (bank[key] === resultCount)){
+                if (typeof result === "number") result = [result, +key];
+                else result = result.concat(+key);
             }
     }
     return result;
 }
-
-
