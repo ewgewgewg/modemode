@@ -1,8 +1,6 @@
 # modemode
 
-Finds the mode of an array.
-
-Defaults to greatest number in event of ties. Optional second parameter, if set to true, will set the function to return array responses, including, if appropriate, an array of the ties.
+Finds the mode of an array. Defaults to greatest number in event of ties. Optional second parameter, if set to true, will set the function to return array responses, including, if appropriate, an array of the ties.
 
 ## Install
 
