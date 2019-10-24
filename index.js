@@ -1,7 +1,7 @@
 //default is to return greatest number in a tie
-//adding optional second parameter of true will instead return an array of ties
+//adding optional second parameter of true will instead return array responses, including the possibility of an array of ties
 
-module.exports = function mode (array, doYouWantAnArrayOfTies = false) {
+module.exports = function mode (array, doYouWantAnArray = false) {
     const bank = {};
     for (let element of array){
         if (!bank[element]){
@@ -16,15 +16,15 @@ module.exports = function mode (array, doYouWantAnArrayOfTies = false) {
         if(bank[key] > resultCount){
             result = +key;
             resultCount = bank[key];
-        } else if ((doYouWantAnArrayOfTies === false) &&
+        } else if ((doYouWantAnArray === false) &&
             (bank[key] === resultCount) &&
             (key > result)){
                 result = +key;
-        } else if ((doYouWantAnArrayOfTies === true) &&
+        } else if ((doYouWantAnArray === true) &&
             (bank[key] === resultCount)){
                 if (typeof result === "number") result = [result, +key];
                 else result = result.concat(+key);
             }
     }
-    return result;
+    return (doYouWantAnArray === true) && (typeof result === "number") ? [result] : result;
 }
